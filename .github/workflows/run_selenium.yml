@@ -26,6 +26,6 @@ jobs:
 
     - name: Run tests
       run: |
-        xvfb-run python -m unittest test/submit_test.py
+        xvfb-run python -m unittest submit_test.py
       env:
         CHROME_BIN: ${{ steps.setup-chrome.outputs.executablePath }}
