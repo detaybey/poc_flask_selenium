@@ -22,7 +22,7 @@ jobs:
       run: |
         sudo apt-get install -y xvfb
         python -m pip install --upgrade pip
-        pip install selenium webdriver_manager
+        pip install -r requirements.txt
 
     - name: Start application
       run: |
