@@ -24,6 +24,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install selenium webdriver_manager
 
+    - name: Start application
+      run: |
+        python app.py &
+        sleep 3  # give the application some time to start
+
     - name: Run tests
       run: |
         xvfb-run python -m unittest submit_test.py

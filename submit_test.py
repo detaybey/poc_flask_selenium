@@ -23,7 +23,7 @@ class FlaskFormTest(unittest.TestCase):
         self.driver.quit()
 
     def test_form_submission(self):
-        self.driver.get('http://127.0.0.1:5000/')
+        self.driver.get('http://localhost:5000/')
         WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.NAME, 'text')))
         text_input = self.driver.find_element(By.NAME, 'text')
         text_input.send_keys('Test text')
