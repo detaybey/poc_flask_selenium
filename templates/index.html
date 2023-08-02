@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="/" method="post">
+            <input type="text" name="text" id="text">
+            <input type="submit" value="Submit">
+        </form>
+        {% if submitted_text %}
+            <p>You submitted: {{ submitted_text }}</p>
+        {% endif %}
+    </body>
+</html>
